@@ -18,3 +18,5 @@ with open("dnstextsample.txt") as file:
 c.executemany("INSERT INTO dnsDB VALUES (?,?,?,?,?,?,?)", readlist)
 for row in c.execute("SELECT * FROM dnsDB"):
 	print row
+conn.commit()
+conn.close()
